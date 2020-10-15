@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+     background-color: #111a1d;
+    color: WHITE;
+    }
+section{
+     text-align: center;
+        }
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  max-height: 1000px;
+  object-position: 100px;
+  font-family: Verdana, sans-serif;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+h2{
+    text-align: center;
+    font-size: xx-large;
+    font-family: Verdana, sans-serif;
+}
+header{
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+a{
+    width: 10px;
+    color: white;
+    padding: 10px;
+           
+        }
+footer
+{
+    text-align: center;
+    color: darkred;
+    bottom: 0px;
+    position: fixed;
+}
+p{
+    color: black;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .10} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .10} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+
+</style>
+</head>
+<body>
+
+
+<header>
+    <nav>
+
+      <a href=./Rooms.html style="margin-right:100px">𝓡𝓞𝓞𝓜𝓢</a>
+      <a href=./PlacesNearYou.html>𝓟𝓵𝓪𝓬𝓮𝓼 𝓝𝓮𝓪𝓻 𝓨𝓸𝓾</a><br>
+    </nav>
+</header><br>
+
+<h2><pre>𝓟𝓵𝓪𝓬𝓮𝓼 𝓽𝓱𝓪𝓽 𝔀𝓲𝓵𝓵 𝓽𝓪𝓴𝓮 𝔂𝓸𝓾𝓻 𝓫𝓻𝓮𝓪𝓽𝓱 𝓪𝔀𝓪𝔂!</pre></h2>
+
+<div class="slideshow-container">
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit">
+  <img src="MysoreGate.jpg" style="width:100%",style="height: 100%">
+  <div class="text">Mysore Palace</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img class="fit">
+  <img src="pond.jpg" style="width:100%", style="height: 180%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img class="fit">
+    <img src="temple.jpg" style="width: 100%", style="height:200%"> 
+    <div class="text">Golden Tibet Temple</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img class="fit">
+    <img src="nandhi.jpg" style="width:100%", style="height: 100%">
+    <div class="text">Nandhi</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img class="fit">
+    <img src="hills.jpg" style="width:100%", style="height: 100%">
+    <div class="text">Coorg Hills</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img class="fit">
+    <img src="coorg.jpg" style="width:100%", style="height: 100%">
+    <div class="text">Coorg</div>
+  </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 

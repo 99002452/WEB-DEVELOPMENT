@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <header>
+    <nav>
+        <a href=./HomeSweetHome.html>HOME</a>
+        <a href=./Forms&Feedback.html>BOOKING</a>
+        <a href=./AboutHotel.html>ABOUT</a><br>
+    </nav>
+</header><br>
+
+<h2>BOOKING</h2>
+
+<style>
+  body{
+    background-image: url('sunset.jpg');
+    
+    background-size: cover;
+    background-colOr:black;
+     color: WHITE;
+      
+
+  }
+  section{
+      text-align: center;
+  }
+  h2{
+      color: white;
+      border: 0px lightyellow;
+      font-family: 'Sansita Swashed', cursive;
+      text-align: center;
+  
+  }
+  nav{ font-size: x-large;
+       font-family: 'Courier New', Courier, monospace;
+      
+      background-color: slategrey;
+      color: antiquewhite;
+      padding: 15px;
+      border: 2px;
+      margin: 10px;
+      text-align: center;
+  }
+  header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    text-align: center;
+    font-size: xx-large;
+}
+  a{
+      width: 10px;
+      color: white;
+      padding: 10px;
+     
+  }
+  footer{
+      text-align: center;
+      color: darkred;
+      bottom: 0px;
+      position: fixed;
+
+  }
+  p{
+      color: rgb(158, 16, 16);
+  }
+
+  form{color: rgb(238, 232, 232);
+      border: 0px lightyellow;
+      font-size: xx-large;
+      font-family: 'Sansita Swashed', cursive;
+      text-align:center;
+      
+        
+
+  }
+
+</style>
+
+<form action="/action_page.php">
+
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value=" "><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="emailid"> E-MAIL ID:</label>
+  <input type="text" id="emailid" name="emailid" value=" "><br><br>
+  <label for="number">Contact Number:</label>
+  <input type="number" id="number" number="number" value=" "><br><br>
+  <label for="destination">Desired Destination:</label>
+ 
+  <select destination=" Destination" id="destination">
+    <option value="Options">Options</option>
+    <option value="Coorg">Coorg</option>
+    <option value="Dubai">Dubai</option>
+    <option value="Kochi">Kochi</option>
+    <option value="Ladhak">Ladhak</option>
+    <option value="Lonavla">Lonavla</option>
+    <option value="Manali">Manali</option>
+    <option value="Malabar">Malabar</option>
+    <option value="Pondicheri">Pondicheri</option>
+  </select><br><br>
+
+  <label for="Check-in">Check-in Date:</label>
+  <input type="date" id="Check-in" name="Check-in"><br><br>
+  <label for="Check-out">Check-out Date:</label>
+  <input type="date" id="Check-out" name="Check-out"><br><br>
+
+  <input type="submit" value="Submit">
+</form> 
+
+
+
+</body>
+</html>
