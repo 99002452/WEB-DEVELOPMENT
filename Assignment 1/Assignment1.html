@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <header>
+    <nav>
+        <a href=./HomeSweetHome.html>HOME</a>
+        <a href=./Forms&Feedback.html>BOOKING</a>
+        <a href=./AboutHotel.html>ABOUT</a><br>
+    </nav>
+</header><br>
+
+<h2>BOOKING</h2>
+
+<style>
+  body{
+    background-image: url('sunset.jpg');
+    
+    background-size: cover;
+    background-colOr:black;
+     color: WHITE;
+      
+
+  }
+  section{
+      text-align: center;
+  }
+
+  h2{
+      color: white;
+      border: 0px lightyellow;
+      font-family: 'Sansita Swashed', cursive;
+      text-align: center;
+  
+  }
+  nav{ font-size: x-large;
+       font-family: 'Courier New', Courier, monospace;
+      
+      background-color: slategrey;
+      color: antiquewhite;
+      padding: 15px;
+      border: 2px;
+      margin: 10px;
+      text-align: center;
+  }
+  header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    text-align: center;
+    font-size: xx-large;
+}
+  a{
+      width: 10px;
+      color: white;
+      padding: 10px;
+     
+  }
+  footer{
+    font-size: xx-large;
+      text-align: center;
+      color:white;
+      bottom: 0px;
+      position: fixed;
+
+  }
+  p{
+      color: rgb(158, 16, 16);
+  }
+
+  form{color: rgb(238, 232, 232);
+      border: 0px lightyellow;
+      font-size: xx-large;
+      font-family: 'Sansita Swashed', cursive;
+      text-align:center;
+  }
+  
+</style>
+
+  <script>
+        function validata() {
+
+
+            var names=['Prathibha','Monika','Sandhya','Vaishu','Supraja'];
+			var flag;
+			flag = 1;
+            var low = /[a-z]/g;
+            var upper = /[A-Z]/g;
+            var numbers = /[0-9]/g;
+            var spl = /[!@#$%^&*]/g;
+            if(document.getElementById("fname").value.length<5 || document.getElementById("fname").value.length>15) {
+                alert("Username is not in the length of 5 to 15");
+            }
+
+            if(document.getElementById("lname").value.length<5 || document.getElementById("lname").value.length>15) {
+                alert("Username is not in the length of 5 to 15");
+            }
+			
+            else if(!document.getElementById("password").value.match(low) || !document.getElementById("password").value.match(upper) || !document.getElementById("pass").value.match(numbers) || !document.getElementById("pass").value.match(spl)) {
+                alert("Invalid password, please use all the characters.");
+            }
+          
+            else if(document.getElementById("female").value.match()||(document.getElementById("male").value.match()))
+            {
+                alert("Must choose gender");
+            }
+
+			else if( flag == 1)
+            {
+				for(let i =0; i<names.length; i++)
+				{ 
+					if(document.getElementById("name").value == names[i]){
+						alert('user name exists');
+					}
+				}
+                
+                
+            }
+		
+            else
+            {	
+                document.getElementById("printhere").innerHTML="successfully registered";
+				alert('Successfully Registered');
+            }
+        }
+
+    </script>
+
+ <form id="form1" action="/action_page.php">
+
+
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value=" "><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+ 
+
+  <label for="destination">Desired Destination:</label>
+ 
+  <select destination=" Destination" id="destination">
+    <option value="Options">Options</option>
+    <option value="Coorg">Coorg</option>
+    <option value="Dubai">Dubai</option>
+    <option value="Kochi">Kochi</option>
+    <option value="Ladhak">Ladhak</option>
+    <option value="Lonavla">Lonavla</option>
+    <option value="Manali">Manali</option>
+    <option value="Malabar">Malabar</option>
+    <option value="Pondicheri">Pondicheri</option>
+  </select><br><br>
+
+  <label for="Check-in">Check-in Date:</label>
+  <input type="date" id="Check-in" name="Check-in"><br><br>
+  <label for="Check-out">Check-out Date:</label>
+  <input type="date" id="Check-out" name="Check-out"><br><br>
+  <h>GENDER:</h><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+   <input type="button" onclick="myFunction()" value="Submit">
+  
+</form> 
+
+<script>
+function myFunction() {
+  document.getElementById("form1").submit();
+}
+</script>
+<footer>WELCOME!</footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>Further Education!</header><br>
+
+    <style>
+
+        header{
+            text-align: center;
+        }
+        body{
+          background-image: url('sunset.jpg');
+          background-size: cover;
+          background-color: bisque;
+           color: WHITE;
+         
+        }
+        p{
+        font-family: 'Sansita Swashed', cursive;
+        text-align: center;
+        font-size: xx-large;
+         }
+
+         footer{
+             font-size: xx-large;
+         }
+        section{
+            text-align: center;
+        }
+        h2{
+            color: white;
+            border: 0px lightyellow;
+            font-family: 'Sansita Swashed', cursive;
+            text-align: center;
+        
+        }
+        nav{ font-size: x-large;
+             font-family: 'Courier New', Courier, monospace;
+            
+            background-color: slategrey;
+            color: antiquewhite;
+            padding: 15px;
+            border: 2px;
+            margin: 10px;
+            text-align: center;
+        }
+        header{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          
+          text-align: center;
+          font-size: xx-large;
+      }
+        a{
+            width: 10px;
+            color: white;
+            padding: 10px;
+           
+        }
+        footer{
+            text-align: center;
+            color: darkred;
+            bottom: 0px;
+            position: fixed;
+      
+        }
+        
+        form{color: rgb(238, 232, 232);
+            border: 0px lightyellow;
+            font-size: xx-large;
+            font-family: 'Sansita Swashed', cursive;
+            text-align:center;
+             
+      
+        }
+      
+      </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Page</title>
+    <script src="./Scripts/Common.js"></script>
+    <script>
+        let store=[0,1,2];
+       let ddfunc=()=>{
+            var x = document.getElementById("myList").value;
+            if(x== store[0])
+            {
+                var Country = ['London','Germany','Canada','China'];
+                document.getElementById("printlist").innerHTML = Country.join("<br>");
+            }
+
+             if(x == store[1])
+            {
+                var PG = ['MS','M.tech','MBA','MMA'];
+                document.getElementById("printlist").innerHTML = PG.join("<br>");
+            }
+
+            else if(x == store[2])
+            {
+                var Courses = ['Cloud Computing','Business Analytics','AI','Data Science'];
+                document.getElementById("printlist").innerHTML = Courses.join("<br>");
+            }
+        }
+
+    </script>
+</head>
+<body style="text-align:center">
+    <select id="myList" onchange="ddfunc()">
+        <option >----------Choose-----------</option>
+        <option value="0">Country</option>
+        <option value="1">PG</option>
+        <option value="2">Courses</option>
+      </select> 
+      <p id="printlist"></p>
+
+      <footer>Welcome!</footer>
+</body>
+</html>
+
